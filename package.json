@@ -1,0 +1,40 @@
+{
+  "name": "babel-experiments",
+  "version": "0.1.0",
+  "description": "Dedicated to playing with babel",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "debug": "node --inspect-brk --inspect=0.0.0.0:9229 src/index.js",
+    "run-babel": "babel-node src/index.js",
+    "debug-babel": "babel-node --inspect-brk --inspect=0.0.0.0:9229 src/index.js",
+    "build": "npx babel src -d build",
+    "run-build": "node build/index.js",
+    "debug-build": "node --inspect-brk --inspect=0.0.0.0:9229 build/index.js",
+    "build-and-run": "npm-run-all build run-build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexyk/babel-experiments.git"
+  },
+  "keywords": [
+    "babel",
+    "javascript",
+    "node",
+    "nodejs"
+  ],
+  "author": "Alex K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexyk/babel-experiments/issues"
+  },
+  "homepage": "https://github.com/alexyk/babel-experiments#readme",
+  "devDependencies": {
+    "@babel/cli": "7.6.2",
+    "@babel/core": "7.6.2",
+    "@babel/node": "7.6.2",
+    "@babel/preset-env": "7.6.2",
+    "@babel/runtime": "7.6.2",
+    "npm-run-all": "4.1.5"
+  }
+}

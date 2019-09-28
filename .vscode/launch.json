@@ -1,0 +1,88 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "NPM Start",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "console": "internalConsole"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "NPM Debug",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "debug"],
+      "port": 9229,
+      "console": "internalConsole"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel Run/Debug",
+      "runtimeExecutable": "npx",
+      "args": ["babel-node", "${workspaceFolder}/src/index.js"],
+      "console": "internalConsole"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "----------------------------------",
+      "runtimeExecutable": "ls"
+    },
+   
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug (--experimental-modules)",
+      "args": ["--experimental-modules", "${workspaceFolder}/src/index.js"],
+      "runtimeExecutable": "node",
+      "console": "internalConsole"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "----------------------------------",
+      "runtimeExecutable": "ls"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel - build only",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["babel", "src", "-d", "build"],
+      "console": "integratedTerminal"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Babel - build & run",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "build-and-run"],
+      "console": "integratedTerminal"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run build",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "run-build"],
+      "outputCapture": "console"
+    },
+
+  ]
+}
