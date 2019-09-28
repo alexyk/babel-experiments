@@ -11,7 +11,8 @@
     "build": "npx babel src -d build",
     "run-build": "node build/index.js",
     "debug-build": "node --inspect-brk --inspect=0.0.0.0:9229 build/index.js",
-    "build-and-run": "npm-run-all build run-build"
+    "build-and-run": "npm-run-all build run-build",
+    "check-circular": "madge --circular src/"
   },
   "repository": {
     "type": "git",
